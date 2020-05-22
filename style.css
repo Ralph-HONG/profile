@@ -1,5 +1,5 @@
 body {
-    margin: 0px;
+    margin: 20px;
 }
 
 
@@ -92,13 +92,36 @@ a {
     align-items: center;
 }
 
-
+/* board header */
 #header {
     border-bottom : solid 2px;
-    margin: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* board table */
+.board_main {
+    
 }
 
 
-#board_table {
-    border : solid 1px;
+.board_main {
+    margin: auto;
+}
+
+
+table {
+    width: 100%;
+}
+
+
+th, td {
+    border-bottom: 1px solid #bcbcbc;
+    padding: 3px;
+}
+
+writeButton {
+
 }
