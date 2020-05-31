@@ -76,11 +76,17 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
 }
+
+
 
 body {
     cursor: default;
+    margin: 0;
 }
+
+
 /* Nav */
 #navbar {
     position: fixed;
@@ -91,6 +97,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
     background-color: transparent;
+    transition: all 200ms ease-in;
 }
 
 
@@ -108,7 +115,7 @@ body {
 }
 
 .navbar_menu_item.active {
-    border: solid white 1px;
+    border: solid rgb(0, 39, 123) 1px;
     border-radius: 5px;
 }
 
@@ -120,8 +127,13 @@ body {
 
 .navbar_logo {
     font-size: var(--font-medium);
+    font-weight: var(--weight-bold);
 }
 
+#navbar.navbar_dark {
+    background-color: #73aace;
+    padding: 20px;
+}
 
 /* HOME */
 
@@ -274,7 +286,6 @@ body {
 .skill_description {
     display: flex;
     justify-content: space-between;
-    flex-wrap: ;
     font-size: var(--font-regular);
     padding: 0 20px;
 }
