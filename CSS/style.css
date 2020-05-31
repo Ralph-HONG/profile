@@ -71,21 +71,26 @@ p {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-
+body {
+    cursor: default;
+}
 /* Nav */
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     box-sizing: border-box;
-    background-color: powderblue;
+    background-color: transparent;
 }
 
 
@@ -96,12 +101,24 @@ a {
     margin: 0px;
 }
 
-.navbar_menu_item{
-    margin: 0 20px;
-    padding:10px 0;
+.navbar_menu_item {
+    margin: 0 10px;
+    padding: 10px 10px;
+    cursor: pointer;
 }
 
-.navbar_logo{
+.navbar_menu_item.active {
+    border: solid white 1px;
+    border-radius: 5px;
+}
+
+.navbar_menu_item:hover {
+    background-color: steelblue;
+    color: white;
+    border-radius: 5px;
+}
+
+.navbar_logo {
     font-size: var(--font-medium);
 }
 
@@ -110,25 +127,30 @@ a {
 
 #home {
     text-align: center;
-    margin-top: 20px;
     background: url(/imgs/backgroundImage.jpg) center/cover no-repeat;
-    padding: 20px 0;
-
+    padding: 40px;
+    padding-top: 100px;
 }
 
-.home_avatar{
+.home_avatar {
     width: 350px;
     height: auto;
     border-radius: 100px;
-    border: solid blanchedalmond 5px;
+    border: solid var(--color-dark-grey) 4px;
 }
 
 .home_title {
-    margin : 0;
+    margin: 0;
+    color: var(--color-dark-grey);
+
 }
 
-.home_description{
+
+
+.home_description {
     font-size: var(--font-regular);
+    color: var(--color-dark-grey);
+
 }
 
 
@@ -137,10 +159,164 @@ a {
     font-size: var(--font-regular);
     font-weight: var(--weight-semi-bold);
     margin-top: 20px;
-    border: 2px solid white;
+    border: solid var(--color-dark-grey) 2px;
     border-radius: 10px;
-    color: white;
+    color: var(--color-dark-grey);
     background: none;
 }
 
 
+
+/* About */
+
+#about {
+    text-align: center;
+    margin-top: 50px;
+    margin: auto;
+    width: 1000px;
+    padding: 20px;
+}
+
+.introduce {
+    width: 800px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.about_majors {
+    display: flex;
+    margin: auto;
+    margin-top: 80px;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.major_icon {
+    border: solid var(--color-blue) 2px;
+    line-height: 180px;
+    font-size: 100px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    color: var(--color-blue);
+}
+
+
+.major_title {
+    margin: 10px 0;
+    font-size: var(--font-medium);
+    font-weight: var(--weight-bold);
+}
+
+
+.about_jobs {
+    margin-top: 50px;
+    border-top: solid var(--color-dark-grey) 1px;
+}
+
+.job_logo {
+    width: 100px;
+    height: auto;
+}
+
+.job {
+    align-items: center;
+    text-align: left;
+    display: flex;
+    margin-left: 50px;
+}
+
+.job p {
+    font-size: var(--font-micro);
+}
+
+
+
+/* skills */
+
+#skills {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    background: var(--color-yellow);
+}
+
+#skills p {
+    width: 800px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+
+.skillset_title {
+    color: var(--color-white);
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    margin-bottom: 20px;
+
+}
+.skillset {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    box-sizing: border-box;
+    justify-content: center;
+    color: var(--color-white);
+}
+
+.skillset_left {
+    width: 600px;
+    height: 300px;
+    background: var(--color-dark-grey);
+}
+
+.skill_description {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: ;
+    font-size: var(--font-regular);
+    padding: 0 20px;
+}
+
+
+.skillset_right {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    flex-direction: column;
+    background: var(--color-light-grey);
+    box-sizing: border-box;
+}
+
+
+.tools {
+    background: var(--color-grey);
+    height: 170px;
+}
+
+
+.tools_list {
+    text-align: center;
+    margin: auto;
+}
+
+
+.etc {
+    background: var(--color-light-grey);
+    height: 130px;
+}
+
+
+.skill_bar {
+    margin: 0 20px;
+    margin-bottom: 20px;
+    height: 5px;
+    background-color: var(--color-light-grey);
+    
+}
+
+.skill_value {
+    background-color: var(--color-orange);
+    height: 5px;
+}
