@@ -1,0 +1,146 @@
+/* Global */
+
+
+:root {
+
+    /* Color */
+
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+
+
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+}
+
+
+/* Typography */
+
+h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 16px 0px;
+}
+
+
+
+h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+
+
+h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+
+p {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 4px 0;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Nav */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: powderblue;
+}
+
+
+
+
+.navbar_menu {
+    display: flex;
+    margin: 0px;
+}
+
+.navbar_menu_item{
+    margin: 0 20px;
+    padding:10px 0;
+}
+
+.navbar_logo{
+    font-size: var(--font-medium);
+}
+
+
+/* HOME */
+
+#home {
+    text-align: center;
+    margin-top: 20px;
+    background: url(/imgs/backgroundImage.jpg) center/cover no-repeat;
+    padding: 20px 0;
+
+}
+
+.home_avatar{
+    width: 350px;
+    height: auto;
+    border-radius: 100px;
+    border: solid blanchedalmond 5px;
+}
+
+.home_title {
+    margin : 0;
+}
+
+.home_description{
+    font-size: var(--font-regular);
+}
+
+
+.home_contact {
+    padding: 5px 20px;
+    font-size: var(--font-regular);
+    font-weight: var(--weight-semi-bold);
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    background: none;
+}
+
+
