@@ -331,3 +331,120 @@ body {
     background-color: var(--color-orange);
     height: 5px;
 }
+
+
+
+/* works */
+
+#work {
+    text-align: center;
+    margin : auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+.work_categories {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    width: 800px;
+    
+    justify-content: center;
+}
+
+
+.category_btn {
+    background-color: white;
+    border: solid var(--color-light-grey) 1px;
+    border-radius: 2px;
+    padding: 5px 30px;
+    font-weight: var(--weight-semi-bold);
+    cursor: pointer;
+}
+
+.work_projects {
+    margin: 2px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--color-light-grey);
+}
+
+#work img {
+    width: 150px;
+}
+
+.work_project_Thum {
+    display: flex;
+    width:1000px ;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+
+/* Testimonials */
+
+
+#testimonials {
+    text-align: center;
+    background-color: rgb(244, 217, 181);
+    padding: 20px;
+}
+
+
+.testimonial_people1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial_people2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.tsetimonial_speechBubble {
+    text-align: left;
+    margin-left: 20px;
+    width: 800px;
+    
+}
+.tsetimonial_speechBubble p {
+   font-size: var(--font-micro); 
+}
+
+.testimonial_avatar {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+
+
+.name {
+    margin-top: 10px;
+    font-weight: var(--weight-bold);
+}
+
+
+/* contact */
+
+#contact {
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+
+#contact i {
+    font-size: 50px;
+}
+
+
+.contact_rights {
+    font-size: var(--font-micro);
+}
