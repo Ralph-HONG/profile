@@ -269,7 +269,8 @@ body {
 }
 .skillset {
   display: flex;
-  width: 1000px;
+  width: auto
+;
   margin: auto;
   margin-top: 30px;
   box-sizing: border-box;
@@ -279,7 +280,7 @@ body {
 
 .skillset_left {
   width: 600px;
-  height: 300px;
+  height: 250px;
   background: var(--color-dark-grey);
 }
 
@@ -293,29 +294,33 @@ body {
 
 .skillset_right {
   display: flex;
-  width: 200px;
-  height: 300px;
-  flex-direction: column;
+  width: 600px;
+  margin: auto;
+  height: 170px;
   background: var(--color-light-grey);
   box-sizing: border-box;
+  color: white;
 }
 
 
 .tools {
   background: var(--color-grey);
   height: 170px;
+  width: 300px;
 }
 
 
 .tools_list {
   text-align: center;
-  margin: auto;
+  margin :  auto;
 }
 
 
 .etc {
   background: var(--color-light-grey);
   height: 130px;
+  margin: auto;
+  padding-bottom: 10px;
 }
 
 
@@ -323,7 +328,6 @@ body {
   margin: 0 20px;
   margin-bottom: 20px;
   height: 5px;
-  background-color: var(--color-light-grey);
 
 }
 
@@ -449,3 +453,9 @@ body {
   font-size: var(--font-micro);
 }
 
+
+
+.slider {
+  width: 100%;
+  outline: none;
+}
