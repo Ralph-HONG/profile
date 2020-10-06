@@ -2,282 +2,299 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HONG's Portfolio</title>
-    <meta name="description" content="홍인표의 포트폴리오 홈페이지입니다.">
-    <meta name="auther" content="HONG">
-    <script src="https://kit.fontawesome.com/b94ff2188b.js" crossorigin="anonymous"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="../../imgs/favicon-200515-154159.png">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <script src="../JS/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HONG's Portfolio</title>
+  <meta name="description" content="홍인표의 포트폴리오 홈페이지입니다.">
+  <meta name="auther" content="HONG">
+  <script src="https://kit.fontawesome.com/b94ff2188b.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,700&display=swap"
+      rel="stylesheet">
+  <link rel="icon" type="image/png" href="../../imgs/favicon-200515-154159.png">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <script src="../JS/hip.scroller.js" ></script>
+  <script src="../JS/hip.scrollMover.js" ></script>
+  <script>
+    $(document).ready(function (){
+      window.hip.scroller.load('#navbar', 'navbar_dark');
+      window.hip.scrollMover.with('#navbar li');
+
+      $("#test").click(function (e){
+        window.hip.scrollMover.scroll(".job_name");
+      });
+
+      setTimeout(function (){
+        window.hip.scrollMover.scroll(".skillset");
+      }, 5000);
+    });
+
+  </script>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav id="navbar">
-        <div class="navbar_logo">
-            <i class="fab fa-adn"></i>
-            <a href="#">HIP's Coding</a>
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="navbar_logo">
+    <i class="fab fa-adn"></i>
+    <a href="#">HIP's Coding</a>
+  </div>
+  <div class="navbar_menu">
+    <ul class="navbar_menu">
+      <li class="navbar_menu_item active" data-link="#home">Home</li>
+      <li class="navbar_menu_item" data-link="#about">About</li>
+      <li class="navbar_menu_item" data-link="#skills">Skills</li>
+      <li class="navbar_menu_item" data-link="#work">My work</li>
+      <li class="navbar_menu_item" data-link="#testimonials">Testimonials</li>
+      <li class="navbar_menu_item" data-link="#contact">contact</li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!-- Home -->
+<section id="home">
+  <div class="avatar_box">
+    <img src="../imgs/IMG_0842.jpeg" alt="Hong's profile Photo" class="home_avatar">
+  </div>
+  <h1 class="home_title">Hello, <br />I'm Hip Coder</h1>
+  <h2 class="home_description">영상지옥에서 온 미친개발자</h2>
+  <button class="home_contact">Contact Me</button>
+</section>
+
+
+
+
+<!-- About -->
+<section id="about">
+  <h1>About me</h1>
+  <p class="introduce">만천하의 그들을 못하다 작고 공자는 이상을 것이다. 우리 가치를 이상은 같이, 듣는다. 현저하게 이상의 위하여서, 얼마나 철환하였는가? 사라지지 이상이 이상,
+    무엇을 아름답고 뼈 그들의 물방아 청춘의 사막이다. 것은 사랑의 이상의 스며들어 예수는 위하여 인간이 사막이다. 생의 갑 못하다 방황하였으며, 아름다우냐? 새 위하여 착목한는 주는 갑 없으면
+    실현에 이상이 행복스럽고 봄바람이다. 청춘의 천자만홍이 희망의 이상이 쓸쓸하랴? 그들에게 대중을 발휘하기 미인을 가슴에 따뜻한 더운지라 바로 아니더면, 있으랴?
+
+    귀는 길지 두기 봄바람이다. 피어나는 있는 가슴에 우는 우리의 유소년에게서 되는 커다란 것이다. 구하지 품에 속잎나고, 밥을 사는가 힘차게 앞이 우리의 힘있다. 이것을 사라지지 가지에 이상,
+    고동을 되는 싸인 얼마나 있는가? 청춘이 용감하고 모래뿐일 살았으며, 싸인 사랑의 그림자는 온갖 황금시대의 철환하였는가? 귀는 대중을 광야에서 뼈 것은 위하여서. 꽃 같이, 하여도 것이다.
+    가슴이 그들은 피에 같은 철환하였는가? 대고, 내려온 생의 꽃이 피고 얼음이 그러므로 청춘의 가슴이 이것이다. 눈에 피가 생생하며, 전인 이상, 열락의 풍부하게 그러므로 청춘이 황금시대다.
+  </p>
+  <div class="about_majors">
+    <div class="major">
+      <div class="major_icon">
+        <i class="fab fa-html5"></i>
+      </div>
+      <div class="major_title">Front-end</div>
+      <div class="major_description">
+        HTML, CSS, JavaScript
+      </div>
+    </div>
+    <div class="major">
+      <div class="major_icon">
+        <i class="fas fa-server"></i>
+      </div>
+      <div class="major_title">Back-end</div>
+      <div class="major_description">
+        Java, Angular
+      </div>
+    </div>
+    <div class="major">
+      <div class="major_icon">
+        <i class="fas fa-mobile"></i>
+      </div>
+      <div class="major_title">Mobile</div>
+      <div class="major_description">
+        Android, IOS
+      </div>
+    </div>
+  </div>
+  <div class="about_jobs">
+    <div class="job">
+      <img src="../imgs/career/CJ cheiljednag.png" alt="" class="job_logo">
+      <div class="job_description">
+        <p class="job_name">채널포유</p>
+        <p class="job_period">2016. 03. 24 - 2019.04.30</p>
+      </div>
+    </div>
+    <div class="job">
+      <img src="../imgs/career/CJ ENM.png" alt="" class="job_logo">
+      <div class="job_description">
+        <p class="job_name">채널포유</p>
+        <p class="job_period">2016. 03. 24 - 2019.04.30</p>
+      </div>
+    </div>
+</section>
+
+
+
+
+<!-- Skills -->
+<section id="skills">
+  <h1>Skills</h1>
+  <h2>Skills & Attributes</h2>
+  <p>
+    I always keep myself busy and try to find something to do.
+    In Korea, you can see many people who always seem to be in a hurry.
+    One of most popular hobbies among Korean is climbing.
+    People can enjoy the feeling of achievement when they reach the peak of the mountain.
+  </p>
+  <div class="skillset">
+    <div class="skillset_left">
+      <h3 class="skillset_title">Skills</h3>
+      <div class="skill">
+        <div class="skill_description">
+          <span>HTML</span>
+          <span>99%</span>
         </div>
-        <div class="navbar_menu">
-            <ul class="navbar_menu">
-                <li class="navbar_menu_item active" data-link="#home">Home</li>
-                <li class="navbar_menu_item" data-link="#about">About</li>
-                <li class="navbar_menu_item" data-link="#skills">Skills</li>
-                <li class="navbar_menu_item" data-link="#work">My work</li>
-                <li class="navbar_menu_item" data-link="#testimonials">Testimonials</li>
-                <li class="navbar_menu_item" data-link="#contact">contact</li>
-            </ul>
+        <div class="skill_bar">
+          <div class="skill_value" style="width : 99%;"></div>
         </div>
-    </nav>
-
-
-
-    <!-- Home -->
-    <section id="home">
-        <div class="avatar_box">
-            <img src="../../../imgs/IMG_0842.jpeg" alt="Hong's profile Photo" class="home_avatar">
+      </div>
+      <div class="skill">
+        <div class="skill_description">
+          <span>CSS</span>
+          <span>70%</span>
         </div>
-        <h1 class="home_title">Hello, <br />I'm Hip Coder</h1>
-        <h2 class="home_description">영상지옥에서 온 미친개발자</h2>
-        <button class="home_contact">Contact Me</button>
-    </section>
+        <div class="skill_bar">
+          <div class="skill_value" style="width : 70%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill_description">
+          <span>JavaScript</span>
+          <span>80%</span>
+        </div>
+        <div class="skill_bar">
+          <div class="skill_value" style="width : 80%;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="skillset_right">
+      <div class="tools">
+        <h3 class="skillset_title">Tools</h3>
+        <ul class="tools_list">
+          <li><span>Visual Studeo Code</span></li>
+          <li><span>Eclips</span></li>
+          <li><span>IntelliJ</span></li>
+          <li><span>Android Studio Code</span></li>
+          <li><span>XCODE</span></li>
+        </ul>
+      </div>
+      <div class="etc">
+        <h3 class="skillset_title">ETC</h3>
+        <ul class="etc_list">
+          <li><span>Git</span></li>
+          <li><span>SVN</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
+<!-- Work -->
+<section id="work">
+  <h1>My work</h1>
+  <h3>Projects</h3>
+  <div class="work_categories">
+    <button class="category_btn">
+      All<span class="category_count">3</span>
+    </button>
+    <button class="category_btn">
+      Front-end<span class="category_count"></span>
+    </button>
+    <button class="category_btn">
+      Back-end<span class="category_count"></span>
+    </button>
+    <button class="category_btn">
+      Mobile<span class="category_count"></span>
+    </button>
+  </div>
+  <div class="work_project_Thum">
+    <div class="work_projects">
+      <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
+        <img src="../imgs/projects/git main.png" alt="GitHub">
+      </a>
+    </div>
+    <div class="work_projects">
+      <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
+        <img src="../imgs/projects/git main.png" alt="GitHub">
+      </a>
+    </div>
+    <div class="work_projects">
+      <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
+        <img src="../imgs/projects/git main.png" alt="GitHub">
+      </a>
+    </div>
+    <div class="work_projects">
+      <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
+        <img src="../imgs/projects/git main.png" alt="GitHub">
+      </a>
+    </div>
+    <div class="work_projects">
+      <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
+        <img src="../imgs/projects/git main.png" alt="GitHub">
+      </a>
+    </div>
+    <div class="work_projects">
+      <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
+        <img src="../imgs/projects/git main.png" alt="GitHub">
+      </a>
+    </div>
+  </div>
+  </a>
+  </div>
+</section>
 
-    <!-- About -->
-    <section id="about">
-        <h1>About me</h1>
-        <p class="introduce">만천하의 그들을 못하다 작고 공자는 이상을 것이다. 우리 가치를 이상은 같이, 듣는다. 현저하게 이상의 위하여서, 얼마나 철환하였는가? 사라지지 이상이 이상,
-            무엇을 아름답고 뼈 그들의 물방아 청춘의 사막이다. 것은 사랑의 이상의 스며들어 예수는 위하여 인간이 사막이다. 생의 갑 못하다 방황하였으며, 아름다우냐? 새 위하여 착목한는 주는 갑 없으면
-            실현에 이상이 행복스럽고 봄바람이다. 청춘의 천자만홍이 희망의 이상이 쓸쓸하랴? 그들에게 대중을 발휘하기 미인을 가슴에 따뜻한 더운지라 바로 아니더면, 있으랴?
 
-            귀는 길지 두기 봄바람이다. 피어나는 있는 가슴에 우는 우리의 유소년에게서 되는 커다란 것이다. 구하지 품에 속잎나고, 밥을 사는가 힘차게 앞이 우리의 힘있다. 이것을 사라지지 가지에 이상,
-            고동을 되는 싸인 얼마나 있는가? 청춘이 용감하고 모래뿐일 살았으며, 싸인 사랑의 그림자는 온갖 황금시대의 철환하였는가? 귀는 대중을 광야에서 뼈 것은 위하여서. 꽃 같이, 하여도 것이다.
-            가슴이 그들은 피에 같은 철환하였는가? 대고, 내려온 생의 꽃이 피고 얼음이 그러므로 청춘의 가슴이 이것이다. 눈에 피가 생생하며, 전인 이상, 열락의 풍부하게 그러므로 청춘이 황금시대다.
+
+<!-- Testimonials -->
+<section id="testimonials">
+  <h1>Testimonials</h1>
+  <h3>See what they say about me</h3>
+  <div class="testimonials">
+    <div class="testimonial_people1">
+      <img src="../imgs/testimonial/IMG_3943.png" alt="People" class="testimonial_avatar">
+      <div class="tsetimonial_speechBubble">
+        <p>I always keep myself busy and try to find something to do.
+          In Korea, you can see many people who always seem to be in a hurry.
+          One of most popular hobbies among Korean is climbing.
+          People can enjoy the feeling of achievement when they reach the peak of the mountain.
         </p>
-        <div class="about_majors">
-            <div class="major">
-                <div class="major_icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="major_title">Front-end</div>
-                <div class="major_description">
-                    HTML, CSS, JavaScript
-                </div>
-            </div>
-            <div class="major">
-                <div class="major_icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <div class="major_title">Back-end</div>
-                <div class="major_description">
-                    Java, Angular
-                </div>
-            </div>
-            <div class="major">
-                <div class="major_icon">
-                    <i class="fas fa-mobile"></i>
-                </div>
-                <div class="major_title">Mobile</div>
-                <div class="major_description">
-                    Android, IOS
-                </div>
-            </div>
-        </div>
-        <div class="about_jobs">
-            <div class="job">
-                <img src="/imgs/career/CJ cheiljednag.png" alt="" class="job_logo">
-                <div class="job_description">
-                    <p class="job_name">채널포유</p>
-                    <p class="job_period">2016. 03. 24 - 2019.04.30</p>
-                </div>
-            </div>
-            <div class="job">
-                <img src="/imgs/career/CJ ENM.png" alt="" class="job_logo">
-                <div class="job_description">
-                    <p class="job_name">채널포유</p>
-                    <p class="job_period">2016. 03. 24 - 2019.04.30</p>
-                </div>
-            </div>
-    </section>
+        <p class="name"><a href="">김영문</a> / 주문진 개백수 </p>
+      </div>
+    </div>
+    <div class="testimonial_people2">
+      <img src="../imgs/testimonial/IMG_4105.jpeg" alt="People" class="testimonial_avatar">
+      <div class="tsetimonial_speechBubble">
+        <p>얼마나 사랑의 풍부하게 하였으며, 위하여 일월과 품으며, 이상이 운다. 인간은 크고 곳으로 들어 청춘이 못하다 있는가? 뼈 청춘의 봄바람을 같지 속잎나고, 무엇을 때문이다.
+          그와 못하다 이상 싶이 위하여, 대중을 불어 끓는다. 인간의 있을 할지라도 뜨거운지라, 보이는 장식하는 예수는 끓는다. 청춘 같으며, 끓는 이것이다. 피가 하였으며,
+          발휘하기 그들의 꽃 있는가? 우리 들어 두손을 그리하였는가? 이상은 인류의 과실이 뭇 싶이 시들어 방지하는 봄바람이다. 눈에 찾아다녀도, 충분히 이상, 가치를 것이다.
+          돋고, 가치를 자신과 싸인 운다. </p>
+        <p class="name"><a href="">김낙타</a> /용인 턱주가리</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
+<!-- contact -->
+<section id="contact">
+  <h1 class="contact_title">Let's talk</h1>
+  <h2 class="contact_email">dev.inpyo@gmail.com</h2>
+  <div class="contact_links">
+    <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
+      <i class="fab fa-github-square"></i>
+    </a>
+    <p class="contact_rights">
+      2020 HIP coding - Allrights reserved
+    </p>
+  </div>
+</section>
 
-    <!-- Skills -->
-    <section id="skills">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-            I always keep myself busy and try to find something to do.
-            In Korea, you can see many people who always seem to be in a hurry.
-            One of most popular hobbies among Korean is climbing.
-            People can enjoy the feeling of achievement when they reach the peak of the mountain.
-        </p>
-        <div class="skillset">
-            <div class="skillset_left">
-                <h3 class="skillset_title">Skills</h3>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>HTML</span>
-                        <span>99%</span>
-                    </div>
-                    <div class="skill_bar">
-                        <div class="skill_value" style="width : 99%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>CSS</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill_bar">
-                        <div class="skill_value" style="width : 70%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill_description">
-                        <span>JavaScript</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill_bar">
-                        <div class="skill_value" style="width : 80%;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skillset_right">
-                <div class="tools">
-                    <h3 class="skillset_title">Tools</h3>
-                    <ul class="tools_list">
-                        <li><span>Visual Studeo Code</span></li>
-                        <li><span>Eclips</span></li>
-                        <li><span>IntelliJ</span></li>
-                        <li><span>Android Studio Code</span></li>
-                        <li><span>XCODE</span></li>
-                    </ul>
-                </div>
-                <div class="etc">
-                    <h3 class="skillset_title">ETC</h3>
-                    <ul class="etc_list">
-                        <li><span>Git</span></li>
-                        <li><span>SVN</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Work -->
-    <section id="work">
-        <h1>My work</h1>
-        <h3>Projects</h3>
-        <div class="work_categories">
-            <button class="category_btn">
-                All<span class="category_count">3</span>
-            </button>
-            <button class="category_btn">
-                Front-end<span class="category_count"></span>
-            </button>
-            <button class="category_btn">
-                Back-end<span class="category_count"></span>
-            </button>
-            <button class="category_btn">
-                Mobile<span class="category_count"></span>
-            </button>
-        </div>
-        <div class="work_project_Thum">
-            <div class="work_projects">
-                <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
-                    <img src="../imgs/projects/git main.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="work_projects">
-                <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
-                    <img src="../imgs/projects/git main.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="work_projects">
-                <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
-                    <img src="../imgs/projects/git main.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="work_projects">
-                <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
-                    <img src="../imgs/projects/git main.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="work_projects">
-                <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
-                    <img src="../imgs/projects/git main.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="work_projects">
-                <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
-                    <img src="../imgs/projects/git main.png" alt="GitHub">
-                </a>
-            </div>
-        </div>
-        </a>
-        </div>
-    </section>
-
-
-
-    <!-- Testimonials -->
-    <section id="testimonials">
-        <h1>Testimonials</h1>
-        <h3>See what they say about me</h3>
-        <div class="testimonials">
-            <div class="testimonial_people1">
-                <img src="../imgs/testimonial/IMG_3943.png" alt="People" class="testimonial_avatar">
-                <div class="tsetimonial_speechBubble">
-                    <p>I always keep myself busy and try to find something to do.
-                        In Korea, you can see many people who always seem to be in a hurry.
-                        One of most popular hobbies among Korean is climbing.
-                        People can enjoy the feeling of achievement when they reach the peak of the mountain.
-                    </p>
-                    <p class="name"><a href="">김영문</a> / 주문진 개백수 </p>
-                </div>
-            </div>
-            <div class="testimonial_people2">
-                <img src="../imgs/testimonial/IMG_4105.jpeg" alt="People" class="testimonial_avatar">
-                <div class="tsetimonial_speechBubble">
-                    <p>얼마나 사랑의 풍부하게 하였으며, 위하여 일월과 품으며, 이상이 운다. 인간은 크고 곳으로 들어 청춘이 못하다 있는가? 뼈 청춘의 봄바람을 같지 속잎나고, 무엇을 때문이다.
-                        그와 못하다 이상 싶이 위하여, 대중을 불어 끓는다. 인간의 있을 할지라도 뜨거운지라, 보이는 장식하는 예수는 끓는다. 청춘 같으며, 끓는 이것이다. 피가 하였으며,
-                        발휘하기 그들의 꽃 있는가? 우리 들어 두손을 그리하였는가? 이상은 인류의 과실이 뭇 싶이 시들어 방지하는 봄바람이다. 눈에 찾아다녀도, 충분히 이상, 가치를 것이다.
-                        돋고, 가치를 자신과 싸인 운다. </p>
-                    <p class="name"><a href="">김낙타</a> /용인 턱주가리</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- contact -->
-    <section id="contact">
-        <h1 class="contact_title">Let's talk</h1>
-        <h2 class="contact_email">dev.inpyo@gmail.com</h2>
-        <div class="contact_links">
-            <a href="https://github.com/hsens/H_homepage" class="project" target="blank">
-                <i class="fab fa-github-square"></i>
-            </a>
-            <p class="contact_rights">
-                2020 HIP coding - Allrights reserved
-            </p>
-        </div>
-    </section>
-
-
+<button id="test" >move test </button>
 
 </body>
 
