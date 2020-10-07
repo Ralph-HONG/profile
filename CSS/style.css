@@ -43,14 +43,12 @@ h1 {
 }
 
 
-
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
 }
-
 
 
 h3 {
@@ -80,7 +78,6 @@ a {
 }
 
 
-
 body {
   cursor: default;
   margin: 0;
@@ -99,8 +96,6 @@ body {
   background-color: transparent;
   transition: all 200ms ease-in;
 }
-
-
 
 
 .navbar_menu {
@@ -158,7 +153,6 @@ body {
 }
 
 
-
 .home_description {
   font-size: var(--font-regular);
   color: var(--color-dark-grey);
@@ -176,7 +170,6 @@ body {
   color: var(--color-dark-grey);
   background: none;
 }
-
 
 
 /* About */
@@ -243,9 +236,10 @@ body {
 }
 
 
-
 /* skills */
-
+.skill {
+  margin-bottom: 20px;
+}
 #skills {
   text-align: center;
   margin: auto;
@@ -267,10 +261,10 @@ body {
   margin-bottom: 20px;
 
 }
+
 .skillset {
   display: flex;
-  width: auto
-;
+  width: 1000px;
   margin: auto;
   margin-top: 30px;
   box-sizing: border-box;
@@ -280,7 +274,7 @@ body {
 
 .skillset_left {
   width: 600px;
-  height: 250px;
+  height: 300px;
   background: var(--color-dark-grey);
 }
 
@@ -294,59 +288,54 @@ body {
 
 .skillset_right {
   display: flex;
-  width: 600px;
-  margin: auto;
-  height: 170px;
+  width: 200px;
+  height: 300px;
+  flex-direction: column;
   background: var(--color-light-grey);
   box-sizing: border-box;
-  color: white;
 }
 
 
 .tools {
   background: var(--color-grey);
   height: 170px;
-  width: 300px;
 }
 
 
 .tools_list {
   text-align: center;
-  margin :  auto;
+  margin: auto;
 }
 
 
 .etc {
   background: var(--color-light-grey);
   height: 130px;
-  margin: auto;
-  padding-bottom: 10px;
 }
 
 
 .skill_bar {
-  margin: 0 20px;
-  margin-bottom: 20px;
   height: 5px;
-
+ position: relative;
+  background-color: var(--color-light-grey);
 }
 
 .skill_value {
   background-color: var(--color-orange);
   height: 5px;
+  position: relative;
+  top: 0;
 }
-
 
 
 /* works */
 
 #work {
   text-align: center;
-  margin : auto;
+  margin: auto;
   padding: 30px;
   box-sizing: border-box;
 }
-
 
 
 .work_categories {
@@ -381,7 +370,7 @@ body {
 
 .work_project_Thum {
   display: flex;
-  width:1000px ;
+  width: 1000px;
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
@@ -403,6 +392,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .testimonial_people2 {
   display: flex;
   flex-direction: row-reverse;
@@ -416,6 +406,7 @@ body {
   width: 800px;
 
 }
+
 .tsetimonial_speechBubble p {
   font-size: var(--font-micro);
 }
@@ -426,7 +417,6 @@ body {
   margin: 20px;
   border-radius: 50%;
 }
-
 
 
 .name {
@@ -443,7 +433,6 @@ body {
 }
 
 
-
 #contact i {
   font-size: 50px;
 }
@@ -454,8 +443,15 @@ body {
 }
 
 
-
-.slider {
-  width: 100%;
-  outline: none;
+.circle {
+  border-radius: 50%;
+  background-color: #73aace;
+  border: 2px solid black;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -8px;
+  left: calc(94% - 7px);
+  z-index: 1;
 }
