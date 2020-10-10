@@ -72,6 +72,7 @@ ul {
   padding: 0;
 }
 
+
 a {
   text-decoration: none;
   color: black;
@@ -98,10 +99,33 @@ body {
 }
 
 
+.burgerMenu {
+  cursor: pointer;
+}
+
+#menuPop {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  top: 73px;
+  justify-content: flex-end;
+}
+
+#menuPop none {
+  position: fixed;
+  width: 100%;
+  display: none;
+  top: 73px;
+  justify-content: flex-end;
+}
+
 .navbar_menu {
   display: flex;
-  margin: 0px;
+  margin: 0;
+  padding: 10px 0;
+  box-sizing: border-box;
 }
+
 
 .navbar_menu_item {
   margin: 0 10px;
@@ -177,7 +201,6 @@ body {
 #about {
   text-align: center;
   margin-top: 50px;
-  margin: auto;
   width: 1000px;
   padding: 20px;
 }
@@ -240,6 +263,7 @@ body {
 .skill {
   margin-bottom: 20px;
 }
+
 #skills {
   text-align: center;
   margin: auto;
@@ -316,7 +340,7 @@ body {
 
 .skill_bar {
   height: 5px;
- position: relative;
+  position: relative;
   background-color: var(--color-light-grey);
 }
 
@@ -455,3 +479,13 @@ body {
   left: calc(94% - 7px);
   z-index: 1;
 }
+
+
+.menu a {
+  cursor: pointer;
+}
+
+.menu .hide {
+  display: none;
+}
+
