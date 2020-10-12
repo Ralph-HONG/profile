@@ -25,7 +25,24 @@
       window.hip.slider.load('.skill:nth(0)', 50);
       window.hip.slider.load('.skill:nth(1)', 20);
       window.hip.slider.load('.skill:nth(2)', 0);
-      window.hip.menuTree.load('menu');
+      // window.hip.menuTree.load('.menu',1);
+      let menu = [
+        {title:"HOME"}
+        ,{title:"ETC",
+          menu:[
+            {title:"Skills"}
+            ,{title:"My work"}
+            ,{title:"Testimonials"}
+          ]
+        }
+        ,{title:"Contact"}
+      ];
+      window.hip.menuTree.load('.menu', menu);
+
+      //option에 따라서 number 인풋 박스 등 기능
+      // window.hip.component.input.load('#inpComp');
+
+
 
       $("#test").click(function (e) {
         window.hip.scrollMover.scroll(".job_name");
@@ -56,22 +73,33 @@
 <!--    <li class="navbar_menu_item" data-link="#contact">contact</li>-->
   </ul>
   <div class="burgerMenu">
-    <div>
-      <ul>
-        <li class="menu">
-          <a><i class="fas fa-bars"></i></a>
-          <ul class="hide">
-            <li class="navbar_menu_item active" data-link="#home">Home</li>
-            <li class="navbar_menu_item" data-link="#about">About</li>
-            <li class="navbar_menu_item" data-link="#skills">Skills</li>
-            <li class="navbar_menu_item" data-link="#work">My work</li>
-            <li class="navbar_menu_item" data-link="#testimonials">Testimonials</li>
-            <li class="navbar_menu_item" data-link="#contact">contact</li>
-          </ul>
-      </ul>
+    <input type="text" id="inpComp" data-option="number">
+    <div class="menu">
+
     </div>
 
-  </div>
+<!--    <div>-->
+<!--      <ul>-->
+<!--        <li>-->
+<!--          <a><i class="fas fa-bars"></i></a>-->
+<!--          <ul class="menu hide">-->
+<!--            <li data-link="#home">-->
+<!--              <a>Home</a>-->
+<!--            </li>-->
+<!--            <li data-link="#about">-->
+<!--              <a>ETC</a>-->
+<!--              <ul>-->
+<!--                <li data-link="#skills"><a href="">Skills</a></li>-->
+<!--                <li data-link="#work"><a>My work</a></li>-->
+<!--                <li data-link="#testimonials"><a>Testimonials</a></li>-->
+<!--              </ul>-->
+<!--            </li>-->
+<!--            <li data-link="#contact"><a>contact</a></li>-->
+<!--          </ul>-->
+<!--      </ul>-->
+<!--    </div>-->
+
+<!--  </div>-->
 </nav>
 
 

@@ -119,30 +119,6 @@ body {
   justify-content: flex-end;
 }
 
-.navbar_menu {
-  display: flex;
-  margin: 0;
-  padding: 10px 0;
-  box-sizing: border-box;
-}
-
-
-.navbar_menu_item {
-  margin: 0 10px;
-  padding: 10px 10px;
-  cursor: pointer;
-}
-
-.navbar_menu_item.active {
-  border: solid rgb(0, 39, 123) 1px;
-  border-radius: 5px;
-}
-
-.navbar_menu_item:hover {
-  background-color: steelblue;
-  color: white;
-  border-radius: 5px;
-}
 
 .navbar_logo {
   font-size: var(--font-medium);
@@ -480,7 +456,7 @@ body {
   z-index: 1;
 }
 
-
+/*Hamburger Menu*/
 .menu a {
   cursor: pointer;
 }
@@ -489,3 +465,30 @@ body {
   display: none;
 }
 
+
+.navbar_menu {
+  display: flex;
+  margin: 0;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+
+.menu li {
+  margin: 0 10px;
+  padding: 10px 10px;
+  background-color: steelblue;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+
+.menu li a.active {
+  color: #fe918d;
+  /*border-radius: 5px;*/
+}
+
+.menu li a:hover {
+  color: #fe918d;
+  /*border-radius: 5px;*/
+}
