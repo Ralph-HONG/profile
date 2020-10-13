@@ -457,11 +457,11 @@ body {
 }
 
 /*Hamburger Menu*/
-.menu a {
+#menu a {
   cursor: pointer;
 }
 
-.menu .hide {
+#menu .hide {
   display: none;
 }
 
@@ -474,7 +474,7 @@ body {
 }
 
 
-.menu li {
+#menu li {
   margin: 0 10px;
   padding: 10px 10px;
   background-color: steelblue;
@@ -483,12 +483,12 @@ body {
 }
 
 
-.menu li a.active {
+#menu li a.active {
   color: #fe918d;
   /*border-radius: 5px;*/
 }
 
-.menu li a:hover {
+#menu li a:hover {
   color: #fe918d;
   /*border-radius: 5px;*/
 }
