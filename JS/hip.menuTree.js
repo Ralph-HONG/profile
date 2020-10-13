@@ -6,52 +6,100 @@
 
       let public_func = {
         target: null
+        ,menus:null
       };
 
+      let private_func = {
+        idx:0
+        ,htmlTemplate:function (menus){
+          let html = "";
+          if (menus != null && menus.length > 0 ) {
+            html += "<ul>";
+            for (let i = 0; i < menus.length; i++) {
+              var menu = menus[i];
+              html += "<li>";
+              let cls = "";
+              if(menu.title != null && menu.title !== ""){
+                if(menu.select === true) {
+                  cls = 'active';
+                }
+                html += "<a href='javascript:hip.menuTree.select("+menu.idx+")' class='"+cls+"'>"+menu.title+"</a>";
+              }
 
-      public_func.load = function (query, menus) {
-        public_func.target = $(query);
-        if (menus == null) {
-          return;
+              if(menu.menu != null){
+                html += private_func.htmlTemplate(menu.menu);
+              }
+              html += "</li>";
+            }
+          }
+          return html;
         }
+        ,menuInit:function (menus){
+          if (menus != null && menus.length > 0 ) {
+            for (let i = 0; i < menus.length; i++) {
+              var menu = menus[i];
+              menu.idx = private_func.idx++;
+              if(menu.menu != null){
+                private_func.menuInit(menu.menu);
+              }
+            }
+          }
+          return menus;
+        }
+        ,menuClear:function (menus){
+          if (menus != null && menus.length > 0 ) {
+            for (let i = 0; i < menus.length; i++) {
+              var menu = menus[i];
+              menu.select = false;
+              if(menu.menu != null){
+                private_func.menuClear(menu.menu);
+              }
+            }
+          }
+          return menus;
+        }
+      };
 
-        for (var i = 0; i < menus.length; i++) {
-          if (menus[i] != null && menus[i].menu != null) {
-            var menu = menus[i].menu;
-            for (let j = 0; j < menu.length; j++) {
+      public_func.find = function (menus, idx) {
+        if(menus == null){
+          menus = public_func.menus;
+        }
+        if (menus != null && menus.length > 0 ) {
+          for (let i = 0; i < menus.length; i++) {
+            var menu = menus[i];
+            if(menu.idx === idx){
+              return menu;
+            }
+            if(menu.menu != null){
+              const findMenu = public_func.find(menu.menu, idx);
+              if(findMenu != null){
+                return findMenu;
+              }
             }
           }
         }
       }
 
-      public_func.input = function (menus) {
+      public_func.load = function (query, menus) {
+        public_func.target = $(query);
+        public_func.menus = private_func.menuInit(menus);
 
-        if (menus == null) {
-          return;
-        }
-        var menuTree = [];
+        public_func.render(menus);
+      }
 
-        var clsFind = document.getElementById('menu');
+      public_func.select = function (idx) {
+        var menu = public_func.find(public_func.menus, idx);
 
-        for (var i = 0; i < menus.length; i++) {
-          console.log(menus[i].title);
-          var ul = document.createElement("ul")
-          clsFind.appendChild(ul).innerHTML = menus[i].title
-
-          if (menus[i] != null && menus[i].menu != null) {
-            var menu = menus[i].menu;
-            clsFind.appendChild(ul).innerHTML = menus[i].title
-            for (let j = 0; j < menu.length; j++) {
-              console.log(menu[j].title);
-              var li = document.createElement("li")
-              ul.appendChild(li).innerHTML = menu[j].title
-            }
-          }
+        if(menu != null){
+          private_func.menuClear(public_func.menus);
+          menu.select = true;
+          public_func.render();
         }
       };
 
-
-      // cls.appendChild(menus);
+      public_func.render = function () {
+        public_func.target.html(private_func.htmlTemplate(public_func.menus));
+      };
 
 
       window.hip.menuTree = public_func;
