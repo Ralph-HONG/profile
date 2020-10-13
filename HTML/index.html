@@ -18,6 +18,7 @@
   <script src="../JS/hip.scrollMover.js"></script>
   <script src="../JS/hip.slider.js"></script>
   <script src="../JS/hip.menuTree.js"></script>
+  <script src="../JS/hip.component.js"></script>
   <script>
     $(document).ready(function () {
       window.hip.scroller.load('#navbar', 'navbar_dark');
@@ -25,6 +26,9 @@
       window.hip.slider.load('.skill:nth(0)', 50);
       window.hip.slider.load('.skill:nth(1)', 20);
       window.hip.slider.load('.skill:nth(2)', 0);
+
+      //option에 따라서 number 인풋 박스 등 기능
+      window.hip.component.input.load('#inpComp');
       // window.hip.menuTree.load('.menu',1);
       let menu = [
         {
@@ -42,8 +46,7 @@
       ];
       window.hip.menuTree.load('#menu', menu);
 
-      //option에 따라서 number 인풋 박스 등 기능
-      // window.hip.component.input.load('#inpComp');
+
 
 
       $("#test").click(function (e) {
@@ -70,7 +73,7 @@
   <div class="burgerMenu">
     <a><i class="fas fa-bars"></i></a>
 
-    <!--    <input type="text" id="inpComp" data-option="number">-->
+        <input type="text" id="inpComp" data-option="number">
     <div id="menu">
     </div>
   </div>
