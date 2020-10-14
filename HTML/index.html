@@ -47,8 +47,6 @@
       window.hip.menuTree.load('#menu', menu);
 
 
-
-
       $("#test").click(function (e) {
         window.hip.scrollMover.scroll(".job_name");
       });
@@ -73,8 +71,8 @@
   <div class="burgerMenu">
     <a><i class="fas fa-bars"></i></a>
 
-        <input type="text" id="inpComp" data-option="number">
-        <input type="button" value="확인" onclick="">
+    <input type="text" id="inpComp" data-option="number">
+    <input type="button" value="확인" onclick="">
     <div id="menu">
     </div>
   </div>
@@ -84,7 +82,7 @@
 <!-- Home -->
 <section id="home">
   <div class="avatar_box">
-    <img src="../imgs/IMG_0842.jpeg" alt="Hong's profile Photo" class="home_avatar">
+    <img src="" alt="Hong's profile Photo" class="home_avatar">
   </div>
   <h1 class="home_title">Hello, <br/>I'm Hip Coder</h1>
   <h2 class="home_description">영상지옥에서 온 미친개발자</h2>
@@ -318,6 +316,49 @@
 </section>
 
 
+<table>
+  <tr>
+    <td>아이디:</td>
+    <td><input type="text" id="id" maxlength="12"/>
+      <button type="submit">유효성체크</button>
+      ※4-12자의 영문 대소문자와 숫자로만 입력
+    </td>
+  </tr>
+  <tr>
+    <td>비번:</td>
+    <td><input type="password" id="pw" maxlength="12"/>
+      <button type="submit">유효성체크</button>
+      ※4-12자의 영문 대소문자와 숫자로만 입력
+    </td>
+  </tr>
+  <tr>
+    <td>비번확인:</td>
+    <td><input type="password" id="checkpw" maxlength="12"/>
+      <button type="submit">유효성체크</button>
+    </td>
+  </tr>
+  <tr>
+    <td>전화번호</td>
+    <td><input type="text" id="phone" maxlength="11"/>
+      <button type="submit">유효성체크</button>
+    </td>
+  </tr>
+  <tr>
+    <td>메일주소:</td>
+    <td><input type="text" id="email"/>
+      <button type="submit">유효성체크</button>
+    </td>
+  </tr>
+  <tr>
+    <td>주민등록번호:</td>
+    <td>
+      <input type="text" id="num1" size="10" maxlength="6">-</input>
+      <input type="password" id="num2" size="10" maxlength="7"/>
+      <button type="submit">유효성체크</button>
+      예) 123456-1234567
+    </td>
+  </tr>
+</table>
 </body>
 
 </html>
