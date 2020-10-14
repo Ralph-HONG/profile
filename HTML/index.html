@@ -28,7 +28,7 @@
       window.hip.slider.load('.skill:nth(2)', 0);
 
       //option에 따라서 number 인풋 박스 등 기능
-      window.hip.component.input.load('#inpComp');
+      window.hip.component.input.load('#phone');
       // window.hip.menuTree.load('.menu',1);
       let menu = [
         {
@@ -320,41 +320,41 @@
   <tr>
     <td>아이디:</td>
     <td><input type="text" id="id" maxlength="12"/>
-      <button type="submit">유효성체크</button>
+      <button type="submit" onclick="window.hip.component.input.submit()">유효성체크</button>
       ※4-12자의 영문 대소문자와 숫자로만 입력
     </td>
   </tr>
   <tr>
     <td>비번:</td>
     <td><input type="password" id="pw" maxlength="12"/>
-      <button type="submit">유효성체크</button>
+      <button type="submit" onclick="window.hip.component.input.submit()">유효성체크</button>
       ※4-12자의 영문 대소문자와 숫자로만 입력
     </td>
   </tr>
   <tr>
     <td>비번확인:</td>
     <td><input type="password" id="checkpw" maxlength="12"/>
-      <button type="submit">유효성체크</button>
+      <button type="submit" onclick="window.hip.component.input.submit()">유효성체크</button>
     </td>
   </tr>
   <tr>
     <td>전화번호</td>
-    <td><input type="text" id="phone" maxlength="11"/>
-      <button type="submit">유효성체크</button>
+    <td><input type="text" data-option="number" id="phone" maxlength="11"/>
+      <button type="submit" onclick="window.hip.component.input.submit()">유효성체크</button>
     </td>
   </tr>
   <tr>
     <td>메일주소:</td>
-    <td><input type="text" id="email"/>
-      <button type="submit">유효성체크</button>
+    <td><input type="text" data-option="number" id="email"/>
+      <button type="submit" onclick="window.hip.component.input.submit()">유효성체크</button>
     </td>
   </tr>
   <tr>
     <td>주민등록번호:</td>
     <td>
-      <input type="text" id="num1" size="10" maxlength="6">-</input>
-      <input type="password" id="num2" size="10" maxlength="7"/>
-      <button type="submit">유효성체크</button>
+      <input type="text" data-option="number" id="num1" size="10" maxlength="6">-</input>
+      <input type="password" data-option="number" id="num2" size="10" maxlength="7"/>
+      <button type="submit" id="submit" onclick="window.hip.component.input.submit()">유효성체크</button>
       예) 123456-1234567
     </td>
   </tr>

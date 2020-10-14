@@ -8,12 +8,11 @@
     , input: {}
   };
 
+  let val = ''
 
   public_func.input.load = function (query) {
     let selector = $(query);
     let opt = selector.find("data-option");
-    let check = selector.val();
-
     if (opt.prevObject[0].dataset.option === "number") {
       selector.keypress(function (event) {
         if (event.which && (event.which > 47 && event.which < 58 || event.which === 8)) {
@@ -22,36 +21,28 @@
         }
       });
     }
+
+
+    function email_str(str) {
+      let regEmil = /[a-z0-9]{2,}@[a-z0-9-]{2,}\.[a-z0-9]{2,}/i
+      return regEmil.test(str);
+    }
+
   }
 
 
-  public_func.input.check = function () {
+  public_func.input.submit = function () {
+    var id = document.getElementById("id");
+    var password = document.getElementById("password");
+    var email = document.getElementById("email");
 
+
+    console.log(id, password, email);
+    // if(!IdPwCheck()){ //아이디 비밀번호 검사
+    //   return false;
+    // }else if(!EmailCheck()){ //이메일 검사
+    //   return false;
   }
-    if (opt.prevObject[0].dataset.option !== "email") {
-      let regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-      if (regExp.test(check) === false) {
-        check = "";
-        check.focus();
-      } else {
-        alert('메일형식이 아닙니다');
-      }
-    }
 
-    if (opt.prevObject[0].dataset.option !== "phone") {
-      let check = selector.val();
-
-    }
-
-    if (opt.prevObject[0].dataset.option !== "idNumber") {
-      let check = selector.val();
-      let regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-      if (regExp.test(check) === false) {
-        check = "";
-        check.focus();
-      } else {
-        alert('메일형식이 아닙니다');
-      }
-    }
   window.hip.component = public_func;
 })();
