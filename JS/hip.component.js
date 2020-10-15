@@ -4,45 +4,100 @@
   }
 
   let public_func = {
-    target: null
+    query: null
     , input: {}
+    , option:{
+      required:false
+      ,phone:false
+      ,number:false
+      ,email:false
+      ,jumin:false
+    }
   };
 
   let val = ''
 
   public_func.input.load = function (query) {
+    public_func.query = query;
     let selector = $(query);
-    let opt = selector.find("data-option");
-    if (opt.prevObject[0].dataset.option === "number") {
-      selector.keypress(function (event) {
-        if (event.which && (event.which > 47 && event.which < 58 || event.which === 8)) {
-        } else {
-          event.preventDefault();
-        }
-      });
+    let dataOpt = selector.attr("data-option");
+    let optList = dataOpt.split(',');
+    if(optList != null && optList.length > 0) {
+      for (let i = 0; i < optList.length; i++) {
+        let opt = optList[i];
+        public_func.option[opt] = true;
+      }
     }
 
+    selector.bind("keypress", function (e) {
+      let val = $(e.target).val();
+      if (public_func.isValid(val + e.key, true)) {
 
-    function email_str(str) {
-      let regEmil = /[a-z0-9]{2,}@[a-z0-9-]{2,}\.[a-z0-9]{2,}/i
-      return regEmil.test(str);
+      } else {
+        e.preventDefault();
+      }
+    });
+
+    // if (opt.prevObject[0].dataset.option === "idNumber") {
+    //   let frontNum = selector.val()
+    //   if (frontNum.length >= 8) {
+    //     frontNum += frontNum.val() + '-';
+    //   }
+    // }
+  }
+
+  public_func.inspect = function (){
+    let val = $(public_func.query).val();
+    const result = public_func.isValid(val, false);
+    if(!result){
+      $(public_func.query).css("border", "1px solid #f00");
+    } else {
+      $(public_func.query).css("border", "inherit");
+    }
+  };
+
+  public_func.isValid = function (val, checkNow){
+    if(checkNow === true) {
+      if(public_func.option.number === true){
+        let ret = (val === val.replace(/[^0-9]/g, ""));
+        console.log("val :"+ val + ' valid : ' + ret);
+        return ret;
+      }
+    } else {
+      let ret = true;
+      if(public_func.option.required === true){
+        ret = !(val == null || val === '');
+      }
+      if(public_func.option.number === true){
+        let ret = (val === val.replace(/[^0-9]/g, ""));
+        console.log("val :"+ val + ' valid : ' + ret);
+        return ret;
+      }
+      if(public_func.option.jumin === true){
+        let ret = (val === val.replace(/[^0-9]/g, ""));
+        return (ret.length === 13);
+      }
     }
 
+    return true;
+  };
+
+
+  public_func.input.submit = function (id, pw, phone, email) {
+    let loginId = $('#id').val();
+    let loginPw = $('#pw').val();
+    let loginPhone = $('#phone').val();
+    let loginEmail = $('#email').val();
+
+
+    public_func.input.chkEmail = function (loginEmail) {
+      let regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+      return regExp.test(loginEmail);
+    }
+    console.log('ID : ' + loginId + '\n', 'PW : ' + loginPw + '\n', 'PHONE : ' + loginPhone + '\n', 'E-MAIL : ' + loginEmail + '\n');
   }
-
-
-  public_func.input.submit = function () {
-    var id = document.getElementById("id");
-    var password = document.getElementById("password");
-    var email = document.getElementById("email");
-
-
-    console.log(id, password, email);
-    // if(!IdPwCheck()){ //아이디 비밀번호 검사
-    //   return false;
-    // }else if(!EmailCheck()){ //이메일 검사
-    //   return false;
-  }
-
   window.hip.component = public_func;
 })();
+
+
+
