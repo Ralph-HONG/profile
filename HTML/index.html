@@ -315,20 +315,31 @@
   $(document).ready(function () {
 
     //option에 따라서 number 인풋 박스 등 기능
-    window.hip.component.input.load('#idNumber');
+    // window.hip.component.input.load('#id', '#pw', '#phone', '#email');
+    // window.hip.component.input.event('email-field', 'blur', function (elem, val, e){
+    //   window.hip.component.input.inspect(elem);
+    // });
   });
+
+  function test(elem, val, e) {
+
+  }
 
 </script>
 <table>
   <tr>
     <td>아이디:</td>
-    <td><input type="text" id="id" maxlength="12"/>
+    <td>
+      <input type="text" data-component
+             data-option="numberalpha" id="id" maxlength="12"
+             data-callback="test"
+      />
       ※4-12자의 영문 대소문자와 숫자로만 입력
     </td>
   </tr>
   <tr>
     <td>비번:</td>
-    <td><input type="password" id="pw" maxlength="12"/>
+    <td><input type="text" data-component data-option="alpha" id="pw" maxlength="12"/>
       ※4-12자의 영문 대소문자와 숫자로만 입력
     </td>
   </tr>
@@ -339,7 +350,7 @@
   </tr>
   <tr>
     <td>메일주소:</td>
-    <td><input type="text" id="email" data-option="email"/>
+    <td><input type="text" data-component="email-field" id="email" data-option="email"/>
     </td>
   </tr>
   <tr>
