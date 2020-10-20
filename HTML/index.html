@@ -19,10 +19,12 @@
   <script src="../JS/hip.slider.js"></script>
   <script src="../JS/hip.menuTree.js"></script>
   <script src="../JS/hip.component.js"></script>
+  <script src="../JS/hip.toggleText.js"></script>
   <script>
     $(document).ready(function () {
       window.hip.scroller.load('#navbar', 'navbar_dark');
       window.hip.scrollMover.with('.menu li');
+      window.hip.toggleText.load('#skills h1', ['skills', 'text']);
       window.hip.slider.load('.skill:nth(0)', 50);
       window.hip.slider.load('.skill:nth(1)', 20);
       window.hip.slider.load('.skill:nth(2)', 0);
@@ -61,6 +63,7 @@
 
 <!-- Navbar -->
 <nav id="navbar">
+  <ul>
   <div class="navbar_logo">
     <i class="fab fa-adn"></i>
     <a href="#">HIP's Coding</a>
@@ -148,7 +151,8 @@
 <!-- Skills -->
 <section id="skills">
   <h1>Skills</h1>
-  <h2>Skills & Attributes</h2>
+  <h2>aaaaaaaaa</h2>
+
   <p>
     I always keep myself busy and try to find something to do.
     In Korea, you can see many people who always seem to be in a hurry.
